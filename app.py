@@ -14,7 +14,7 @@ def decompress_pickle(file):
  data = cPickle.load(data)
  return data
 
-loaded_model = decompress_pickle('MSA.pbz2') 
+#loaded_model = decompress_pickle('MSA.pbz2') 
 #union = decompress_pickle('union.pbz2') 
 
 @app.route('/')
