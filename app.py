@@ -15,7 +15,7 @@ def decompress_pickle(file):
  return data
 
 loaded_model = decompress_pickle('MSA.pbz2') 
-union = decompress_pickle('union.pbz2') 
+#union = decompress_pickle('union.pbz2') 
 
 @app.route('/')
 def home():
@@ -34,13 +34,13 @@ def predict():
     #output=u'' + output.decode('utf-8')
     sent=sent.rstrip()
     sent=sent.lstrip()
-    sent2 = union.transform([sent])
-    prediction =loaded_model.predict(sent2)
-    prediction=str(prediction).replace("['", "")
-    prediction=str(prediction).replace("']", "")
-    outputstatment = prediction + "\n  " + str(int_features)
+    #sent2 = union.transform([sent])
+    #prediction =loaded_model.predict(sent2)
+    #prediction=str(prediction).replace("['", "")
+    #prediction=str(prediction).replace("']", "")
+    #outputstatment = prediction + "\n  " + str(int_features)
 
-    return render_template('index.html', prediction_text=outputstatment)
+    return render_template('index.html', prediction_text='outputstatment')
 
 
 
